@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.container {
+  display: flex;
+  max-width: 100px;
+  margin: 200px;
+  padding: 20px;
+  flex-direction: row; /* Расположение элементов в строку (горизонтально) */
+}
+
+.content {
+  flex: 1; /* Занимает доступное пространство */
+  /* Стили центральной части сайта */
+}
+
+.sidebar {
+  margin-left: 10px; /* Расстояние между .content и .sidebar */
+  background-color: rgb(221, 221, 221); /* Цвет фона */
+  flex-direction: column;
+}
+
+
+.img {
+  width: 1000px; /* Ширина квадратика */
+  height: 1000px; /* Высота квадратика */
+  max-height: 100px;
+  max-width: 100px;
+  margin-bottom: 500px; /* Расстояние между изображениями */
+}
+
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.contact {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.hidden {
+    display: none;
+  }
+  
+  #popupContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fdf9ec;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 10;
+    transition: opacity 10s ease;
+  }
+  
+  #popupContainer.visible {
+    opacity: 1;
+  }
+
+  #closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+  }
+  
+    
+  .centered-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #fdf9ec;
+  }
+
+  .centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+ 
+  
