@@ -3,6 +3,8 @@
 <link>
 <style class="css"></style>
 
+<button id="popupButton" class="centered-button">Зв'язатись зі мною</button>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +14,13 @@
 
 <body>
   <div class="container">
+    <div class="img">
+      <!-- Колонка справа -->
+      <div class="img"><img src="pistachios.jpg" alt="Pistachios"></div>
+      <div class="img"><img src="cashew.jpg" alt="Cashew"></div>
+      <div class="img"><img src="Almonds.jpg" alt="Almonds"></div>
+      <!-- Добавьте нужные фотографии товара -->
+    </div>
     <div class="content">
       <h1>Оптовий продаж</h1>
 
@@ -98,36 +107,23 @@
         <p>Країна походження — США</p>
         <p>Ціна: $2.85</p>
       </div>
-      <button id="popupButton" class="centered-button">Зв'язатись зі мною</button>
     </div>
-    <div class="sidebar">
-      <!-- Колонка справа -->
-      <div class="img"><img src="pistachios.jpg" alt="Pistachios"></div>
-      <div class="img"><img src="cashew.jpg" alt="Cashew"></div>
-      <div class="img"><img src="Almonds.jpg" alt="Almonds"></div>
-      <!-- Добавьте нужные фотографии товара -->
-    </div>
+  </div>
 
-    <div id="popupContainer" class="hidden">
-      <button id="closeButton">&times;</button>
-      <div id="popupContent">
-        <div class="centered">
-          <h2>Олег</h2>
-        </div>
-        <div>
-          <p>+380992023899</p>
-        </div>
+
+  <div id="popupContainer" class="hidden">
+    <button id="closeButton">&times;</button>
+    <div id="popupContent">
+      <div class="centered">
+        <h2>Петров Олег Ігорович</h2>
+      </div>
+      <div class="centered">
+        <p>+380992023899</p>
       </div>
     </div>
+  </div>
 </body>
 </div>
-<script>
-  popupButton.addEventListener('click', () => {
-    popupContainer.classList.toggle('visible');
-    popupContainer.classList.toggle('hidden');
-  });
-</script>
-
 <script>
   const popupButton = document.getElementById('popupButton');
   const popupContainer = document.getElementById('popupContainer');

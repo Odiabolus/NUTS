@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background: linear-gradient(to right, #cfcfcf, #e9e9e9);
   margin: 0;
   padding: 0;
   text-align: justify;
@@ -8,36 +8,32 @@ body {
 
 .container {
   display: flex;
-  max-width: 100px;
-  margin: 200px;
+  max-width: 1200px;
+  /* Увеличил максимальную ширину контейнера */
+  margin: 200px auto;
+  /* Центрировал контейнер по горизонтали */
   padding: 20px;
-  flex-direction: row; /* Расположение элементов в строку (горизонтально) */
+  flex-direction: row-reverse;
 }
 
+
 .content {
-  flex: 1; /* Занимает доступное пространство */
+  flex: 1;
   /* Стили центральной части сайта */
 }
 
-.sidebar {
-  margin-left: 10px; /* Расстояние между .content и .sidebar */
-  background-color: rgb(221, 221, 221); /* Цвет фона */
-  flex-direction: column;
-}
-
-
 .img {
-  width: 1000px; /* Ширина квадратика */
-  height: 1000px; /* Высота квадратика */
-  max-height: 100px;
-  max-width: 100px;
-  margin-bottom: 500px; /* Расстояние между изображениями */
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
 }
 
 
 h1 {
-  color: #333;
+  color: #1b1b1b;
+  text-align: center;
 }
+
 
 p {
   color: #666;
@@ -45,67 +41,82 @@ p {
 
 .product {
   background-color: #fff;
+  /* Заменил фоновый цвет на белый */
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .contact {
-  background-color: #fff;
+  background-color: #f0f0f0;
+  /* Заменил фоновый цвет на светло-серый */
   padding: 20px;
   border-radius: 5px;
   text-align: center;
 }
 
 .hidden {
-    display: none;
-  }
-  
-  #popupContainer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fdf9ec;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    opacity: 10;
-    transition: opacity 10s ease;
-  }
-  
-  #popupContainer.visible {
-    opacity: 1;
-  }
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: opacity 1s ease, transform 1s ease;
+}
 
-  #closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #888;
-  }
-  
-    
-  .centered-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 40px;
-    margin: 0 auto;
-    background-color: #fdf9ec;
-  }
+#popupContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(19, 19, 19, 0.15);
+}
 
-  .centered {
+.popupButton {
+ 
+}
+
+#popupContent {
+  text-align: center;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #888;
+}
+
+#popupContainer.visible {
+  opacity: 1;
+}
+
+.centered-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+  width: 150px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(19, 19, 19, 0.15);
+}
 
- 
-  
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: -5px;
+}
